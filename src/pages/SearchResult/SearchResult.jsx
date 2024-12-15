@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import Card from "../../components/Card/Card"
-import "../../components/MealCard/meal.css"
+import "/src/components/MealCard/meal.css"
 import "../../pages/SearchResult/searchresult.css"
 function SearchResult() {
   const location = useLocation();
