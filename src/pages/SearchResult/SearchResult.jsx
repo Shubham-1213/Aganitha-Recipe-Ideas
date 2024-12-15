@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-// import MealCard from "../../components/MealCard/MealCard";
 import Loader from "../../components/Loader/Loader";
 import Card from "../../components/Card/Card"
 import "../../components/MealCard/meal.css"
