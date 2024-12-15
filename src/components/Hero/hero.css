@@ -1,19 +1,4 @@
 .main-container{
-    position: relative;
-    background-image: url(../../assets/heroalt.jpg);
-    /* height: 60vh; */
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    line-height: 1.8;
-    padding: 10vw 2em;
-    height: 50vh;
-    color: white;
-    text-align: center;
-}
-.background-tint {
-    background-color: rgba(59, 57, 54, 0.5);
-    background-blend-mode: multiply;
 }
 
 .hero-content{

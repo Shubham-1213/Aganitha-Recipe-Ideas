@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import MealCard from "../../components/MealCard/MealCard";
+// import MealCard from "../../components/MealCard/MealCard";
 import Loader from "../../components/Loader/Loader";
-
+import Card from "../../components/Card/Card"
+import "../../components/MealCard/Meal.css"
+import "../../pages/SearchResult/searchresult.css"
 function SearchResult() {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
@@ -38,13 +40,13 @@ function SearchResult() {
         if (category) fetchPromises.push(fetchMeals(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`));
 
         const results = await Promise.all(fetchPromises);
-
+        console.log("results",results)
         // Find the intersection of all fetched meal lists
         let mealsData = results[0] || [];
         for (let i = 1; i < results.length; i++) {
           mealsData = mealsData.filter(meal => results[i].some(r => r.idMeal === meal.idMeal));
         }
-
+    
         setMeals(mealsData);
       } catch (err) {
         setError("Something went wrong. Please try again later.");
@@ -71,13 +73,13 @@ function SearchResult() {
 
   return (
     <div>
-      <h1>Search Results</h1>
+      <h1 className="results-heading">Search Results</h1>
       {meals.length === 0 ? (
         <p>No meals found for the given search criteria.</p>
       ) : (
         <div className="meal-list">
           {meals.map((meal) => (
-            <MealCard key={meal.idMeal} meal={meal} />
+            <Card key={meal.idMeal} food={meal} />
           ))}
         </div>
       )}

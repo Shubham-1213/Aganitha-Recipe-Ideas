@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Hero from "../../components/Hero/Hero";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import "./home.css"
 
 function HomePage() {
   const [searchInput, setSearchInput] = useState(""); // Maintain search input here
@@ -29,8 +30,9 @@ function HomePage() {
   };
 
   return (
-    <div>
-      <Hero />
+    <div className="homepage background-tint ">
+     <div className="glass-effect">
+     <Hero />
       <SearchBar
         searchTerm={searchInput} // Pass the current search input to SearchBar
         onSearch={handleSearch} // Pass the search handler to SearchBar
@@ -38,6 +40,7 @@ function HomePage() {
         filters={filters} // Pass the current filter values
         onSearchTermChange={setSearchInput} // Pass the setter for search input to SearchBar
       />
+     </div>
     </div>
   );
 }

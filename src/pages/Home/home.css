@@ -1,0 +1,35 @@
+.homepage{
+    background-image: url(../src/assets/heroalt.jpg);
+    /* height: 60vh; */
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.8;
+     height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.background-tint{
+    background-color: rgba(59, 57, 54, 0.5);
+    background-blend-mode: multiply;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Blur the content behind the div */
+    -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+     /* Light border for glass effect */
+    border-radius: 20px; /* Rounded corners */
+    padding: 2em; /* Internal spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    color: white; /* Text color */
+    
+    max-width: 800px; /* Optional: Limit the width */
+    width: 500px;
+  }
+  

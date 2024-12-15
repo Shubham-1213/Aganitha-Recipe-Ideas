@@ -55,10 +55,10 @@ function Recipe() {
     .map((key) => ingredients[key]);
 
   return (
-    <div>
+    <div className='main-container'>
       <h1>{strMeal}</h1>
       <img src={strMealThumb} alt={strMeal} />
-      <p>{strInstructions}</p>
+      {/* <p>{strInstructions}</p> */}
 
       <h3>Ingredients:</h3>
       <ul>
@@ -67,14 +67,14 @@ function Recipe() {
         ))}
       </ul>
 
-      {strYoutube && (
+      {/* {strYoutube && (
         <div>
           <h3>Watch the Recipe:</h3>
           <a href={strYoutube} target="_blank" rel="noopener noreferrer">
             Watch on YouTube
           </a>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
