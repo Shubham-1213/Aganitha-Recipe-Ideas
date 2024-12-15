@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 // import MealCard from "../../components/MealCard/MealCard";
 import Loader from "../../components/Loader/Loader";
 import Card from "../../components/Card/Card"
-import "../../components/MealCard/Meal.css"
+import "../../components/MealCard/meal.css"
 import "../../pages/SearchResult/searchresult.css"
 function SearchResult() {
   const location = useLocation();
